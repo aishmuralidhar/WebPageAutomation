@@ -1,0 +1,30 @@
+package utils;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class BrowserFactory {
+     WebDriver driver;
+     FirefoxOptions firefoxoptions = new FirefoxOptions();
+     ChromeOptions chromeoptions= new ChromeOptions();
+     EdgeOptions edgeoptions = new EdgeOptions();
+     
+     @BeforeTest
+     public void initialize(String browser) {
+    	 if(browser.equalsIgnoreCase("firefox")) {
+    		 WebDriverManager.firefoxdriver().setup();
+    	 }
+     }
+     
+     
+        
+    }
+
+//*[@id="fashion"]/cookie-banner//div/div[2]/button[1]

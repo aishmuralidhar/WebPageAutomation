@@ -5,8 +5,9 @@
     <classes>
       <class name="tests.NewYorkerUITest">
         <methods>
-          <include name="DoB"/>
+          <include name="selectMenu"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- tests.NewYorkerUITest -->
     </classes>

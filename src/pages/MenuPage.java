@@ -1,5 +1,6 @@
 package pages;
 
+import java.time.Duration;
 import java.util.Map;
 
 import org.openqa.selenium.By;
@@ -17,15 +18,20 @@ public class MenuPage {
 	public void selectCategory(Map<String, String> categoryXPaths) throws InterruptedException {
 		// Iterate over each category entry
 		for (Map.Entry<String, String> entry : categoryXPaths.entrySet()) {
-			Thread.sleep(5000);
-			String categoryName = entry.getKey();
+			long time = 5000;
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(time));
+	
+			//String categoryName = entry.getKey();
 			String categoryXPath = entry.getValue();
 			// Click on the MenuButtom
 			WebElement menuButton = driver.findElement(By.xpath("/html/body/div[1]/div[1]/hamburger-menu"));
 			menuButton.click();
+			
 			// Click on the category element from the Menu
 			WebElement categoryElement = driver.findElement(By.xpath(categoryXPath));
 			categoryElement.click();
+			Thread.sleep(3000);
+
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("window.scrollBy(0, 500);");
 

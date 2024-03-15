@@ -1,0 +1,17 @@
+package tests;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+
+
+import java.io.File;
+
+public class takeScreenshot {
+	
+	public void  getScreenShot(String testCaseName, WebDriver driver) {
+		TakesScreenshot ts= (TakesScreenshot)driver;
+			File source = ts.getScreenshotAs((OutputType.FILE));
+	}
+
+}

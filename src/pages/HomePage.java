@@ -22,7 +22,7 @@ public class HomePage {
 	public void navigateToHomePage(String url) throws InterruptedException {
 		// TODO Auto-generated method stub
 		driver.get(url);
-		Thread.sleep(2000);
+
 		country = driver.findElement(By.xpath("//*[@id=\"fashion\"]/country-picker/div[2]/div/div/div[3]/button"));
 		Female = driver.findElement(By.cssSelector("a.cg-select[onclick*=\"setCustomerGroup('FEMALE')\"]"));
 		country.click();

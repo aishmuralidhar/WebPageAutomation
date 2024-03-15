@@ -1,0 +1,11 @@
+package tests;
+
+import org.openqa.selenium.OutputType;
+
+public class takeSceenshot {
+	
+	public String getScreenShot(String testCaseName) {
+		TakesScreenshot ts=(TakesScreenshotAs(OutputType.FILE));
+	}
+
+}
